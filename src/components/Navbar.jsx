@@ -3,13 +3,13 @@ import { NavLink } from 'react-router';
 
 const Navbar = () => {
     const links = <>
-        <li className='text-base font-medium'><NavLink to='/'>Home</NavLink></li>
+        <li className='text-base font-medium hover:text-[#60A5FA]'><NavLink to='/'>Home</NavLink></li>
         <li className='text-base font-medium'><NavLink to='/'>My Bills</NavLink></li>
         <li className='text-base font-normal'><NavLink to='/'>My Profile</NavLink></li>
     </>
 
     return (
-        <div className="navbar  shadow-sm">
+        <div className="navbar  shadow-sm fixed top-0 left-0 w-full z-50 bg-[#1E3A8A] text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -28,8 +28,9 @@ const Navbar = () => {
           {links}
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn ">Button</a>
+        <div className="navbar-end flex gap-3">
+          <a className="btn bg-[#E0F2FE] text-[#0284C7] hover:bg-[#0284C7] hover:text-white border-0">SignUp</a>
+          <a className="btn bg-[#E0F2FE] text-[#0284C7] hover:bg-[#0284C7] hover:text-white border-0">SignIn</a>
         </div>
       </div>
     );

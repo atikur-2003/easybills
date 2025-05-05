@@ -36,7 +36,7 @@ const WorksWith = () => {
   return (
     <div className="my-24">
         <div className="text-center mb-14">
-            <h1 className="text-3xl font-bold">Organizations we work with</h1>
+            <h1 className="text-xl md:text-3xl font-bold">Organizations we work with</h1>
         </div>
       <Marquee>
         {

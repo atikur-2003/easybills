@@ -40,7 +40,7 @@ const Hero = () => {
                 className="h-full w-full bg-cover bg-center flex flex-col justify-center items-center text-white"
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-                <div className="bg-opacity-50 p-6 rounded text-center max-w-xl">
+                <div className=" p-6 rounded text-center max-w-xl">
                   <h2 className="text-3xl md:text-4xl font-bold mb-2">{slide.title}</h2>
                   <p className="text-lg">{slide.subtitle}</p>
                 </div>
