@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
       </nav>
       <aside>
         <p>
-          Copyright © {new Date().getFullYear()} - All right reserved by EasyBills
+          Copyright © {new Date().getFullYear()} - All right reserved by <Link to='/' className="text-lg font-semibold">EasyBills</Link>
         </p>
       </aside>
     </footer>

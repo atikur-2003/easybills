@@ -8,7 +8,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="text-base font-medium hover:text-[#60A5FA]">
-        <NavLink to="/">My Bills</NavLink>
+        <NavLink to="/bills">My Bills</NavLink>
       </li>
       <li className="text-base font-normal hover:text-[#60A5FA]">
         <NavLink to="/">My Profile</NavLink>
@@ -30,7 +30,7 @@ const Navbar = () => {
            {links}
           </ul>
         </div>
-        <a className="text-xl md:text-2xl font-bold text-white -ml-2 cursor-pointer hover:text-[#60A5FA]">EasyBills</a>
+        <Link to='/' className="text-xl md:text-2xl font-bold text-white -ml-2 cursor-pointer hover:text-[#60A5FA]">EasyBills</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-white">
