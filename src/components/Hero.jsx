@@ -25,7 +25,7 @@ const slides = [
 
 const Hero = () => {
     return (
-        <section className="w-full bg-white">
+        <section className="w-full bg-white mt-16">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
