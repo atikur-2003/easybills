@@ -2,37 +2,61 @@
     {
         "id": 1,
         "bill_type": "Electricity",
-        "icon": "https://i.postimg.cc/pLhMNxxQ/DESCO.jpg",
+        "logo": "https://i.postimg.cc/pLhMNxxQ/DESCO.jpg",
+        "bill_type_icon": "https://www.flaticon.com/free-icons/electricity",
         "organization": "DESCO",
-        "amount": 1890,
+        "amount": 1500,
         "due_date": "2025-06-10T00:00:00.000Z",
         "paid": false
     },
     {
         "id": 2,
         "bill_type": "Gas",
-        "icon": "https://i.postimg.cc/nzMPmGz4/titas.png",
+        "logo": "https://i.postimg.cc/nzMPmGz4/titas.png",
+        "bill_type_icon":"https://www.flaticon.com/free-icons/gas" ,
         "organization": "Titas Gas",
-        "amount": 1488,
+        "amount": 1200,
         "due_date": "2025-06-15T00:00:00.000Z",
         "paid": true
     },
     {
         "id": 3,
         "bill_type": "Internet",
-        "icon": "https://i.postimg.cc/8cHMMmdp/Amber-it.jpg",
+        "logo": "https://i.postimg.cc/8cHMMmdp/Amber-it.jpg",
+        "bill_type_icon":"https://www.flaticon.com/free-icons/internet",
         "organization": "Amber It",
-        "amount": 1050,
+        "amount": 800,
         "due_date": "2025-06-12T00:00:00.000Z",
         "paid": false
     },
     {
         "id": 4,
         "bill_type": "Water",
-        "icon": "https://i.postimg.cc/mgGJn9X4/WASA.jpg",
+        "logo": "https://i.postimg.cc/mgGJn9X4/WASA.jpg",
+        "bill_type_icon": "https://www.flaticon.com/free-icons/water" ,
         "organization": "WASA",
-        "amount": 680,
+        "amount": 600,
         "due_date": "2025-06-18T00:00:00.000Z",
         "paid": true
-    }
+    },
+    {
+        "id": 5,
+        "bill_type": "credit card",
+        "logo": "https://i.postimg.cc/wxQfd77z/dbbl.jpg",
+        "bill_type_icon":"https://www.flaticon.com/free-icons/credit-card",
+        "organization": "DBBL",
+        "amount": 3000,
+        "due_date": "2025-05-20T06:57:58.110Z",
+        "paid": false
+      },
+      {
+        "id": 6,
+        "bill_type": "tuition",
+        "logo": "https://i.postimg.cc/FHBCn81J/nsu.png",
+        "bill_type_icon":"https://www.flaticon.com/free-icons/tution",
+        "organization": "North South University",
+        "amount": 2000,
+        "due_date": "2025-06-01T06:57:58.110Z",
+        "paid": false
+      }
 ]

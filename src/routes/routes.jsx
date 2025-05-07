@@ -5,6 +5,8 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Bills from "../components/Bills";
+import PayBill from "../components/PayBill";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +19,23 @@ const router = createBrowserRouter([
       },
       {
         path: "bills",
-        Component: Bills
-      }
+        element: (
+          <PrivateRoute>
+            <Bills></Bills>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "payBill/:id",
+        element: (
+          <PrivateRoute>
+            <PayBill></PayBill>
+          </PrivateRoute>
+        ),
+      },
     ],
   },
-  
+
   {
     path: "/auth",
     Component: AuthLayout,

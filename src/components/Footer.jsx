@@ -9,7 +9,7 @@ const Footer = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li className="text-base font-medium">
-        <NavLink to="/">My Bills</NavLink>
+        <NavLink to="/bills">My Bills</NavLink>
       </li>
       <li className="text-base font-normal">
         <NavLink to="/">My Profile</NavLink>
