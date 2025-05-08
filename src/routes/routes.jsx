@@ -7,6 +7,8 @@ import Signup from "../pages/Signup";
 import Bills from "../components/Bills";
 import PayBill from "../components/PayBill";
 import PrivateRoute from "./PrivateRoute";
+import MyProfile from "../pages/MyProfile";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path:'profile',
+        Component: MyProfile
+
+      }
     ],
   },
 
@@ -52,7 +59,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <h2>404 not found</h2>,
+    Component: ErrorPage
   },
 ]);
 

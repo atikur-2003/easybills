@@ -13,9 +13,6 @@ const Signup = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [showPass, setShowPass] = useState(false);
 
- 
-
-
   const handleSignup = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -39,10 +36,15 @@ const Signup = () => {
         sendEmailVerification(auth.currentUser)
         .then(() => {
           alert("We sent you a verification Email. Please verify your Email")
-        });updateUser({ displayName: name, photoURL: photo }).then(() => {
+        });
+        
+        updateUser({ displayName: name, photoURL: photo }).
+        then(() => {
           setUser({...user, displayName: name, photoURL: photo});
+          console.log(user);
           navigate('/')
-        }).catch((error) => {
+        })
+        .catch((error) => {
           Swal.fire({
             icon: "error",
             title: "Oops...",

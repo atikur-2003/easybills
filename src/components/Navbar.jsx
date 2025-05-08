@@ -32,7 +32,7 @@ const Navbar = () => {
         <NavLink to="/bills">My Bills</NavLink>
       </li>
       <li className="text-base font-normal hover:text-[#60A5FA]">
-        <NavLink to="/">My Profile</NavLink>
+        <NavLink to="/profile">My Profile</NavLink>
       </li>
     </>
   );
