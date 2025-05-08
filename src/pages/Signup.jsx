@@ -1,15 +1,13 @@
 import React, { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
-import { FaRegEye } from "react-icons/fa";
+import { FaGoogle, FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
-import { sendEmailVerification } from "firebase/auth";
-import { auth } from "../firebase.config";
 import Swal from "sweetalert2";
 
 const Signup = () => {
-  const { createUser, setUser, updateUser } = use(AuthContext);
-  const navigate = useNavigate()
+  const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
   const [showPass, setShowPass] = useState(false);
 
@@ -21,44 +19,56 @@ const Signup = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    setErrorMessage("")
+    setErrorMessage("");
 
-     // password validation
-  const validationEx = /(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{6}/
-  if(validationEx.test(password) === false){
-    setErrorMessage("Password must have one uppercase, one lowercase and have to at least 6 characters long");
-    return;
-  }
+    // password validation
+    const validationEx = /(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{6}/;
+    if (validationEx.test(password) === false) {
+      setErrorMessage(
+        "Password must have one uppercase, one lowercase and have to at least 6 characters long"
+      );
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        sendEmailVerification(auth.currentUser)
-        .then(() => {
-          alert("We sent you a verification Email. Please verify your Email")
-        });
-        
-        updateUser({ displayName: name, photoURL: photo }).
-        then(() => {
-          setUser({...user, displayName: name, photoURL: photo});
-          console.log(user);
-          navigate('/')
-        })
-        .catch((error) => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: {error}
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+            console.log(user);
+            navigate("/");
+          })
+          .catch((error) => {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: { error },
+            });
+            setUser(user);
           });
-          setUser(user)
-
-        });
       })
       .catch((error) => {
         const errorMessage = error.message;
         alert(errorMessage);
       });
   };
+
+  const handleGoogleSignin = () => {
+    googleSignIn()
+    .then(result => {
+      const user = result.user;
+      Swal.fire({
+        title: "SignIn Successful",
+        icon: "success",
+        draggable: true
+      });
+      navigate('/');
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
 
   return (
     <div className="pt-28 px-5 md:px-0">
@@ -97,30 +107,33 @@ const Signup = () => {
 
             <label className="label text-lg font-medium">Password</label>
             <div className="relative">
-            <input
-              type={showPass? 'text':'password'}
-              name="password"
-              className="input"
-              placeholder="Password"
-              required
-            />
-            <button 
-            onClick={()=> {setShowPass (!showPass)}}
-            className="btn btn-xs absolute right-5 top-2 z-10">
-              {
-                showPass? <FaRegEye></FaRegEye> : <FaEyeSlash></FaEyeSlash>
-              }
-            </button>
+              <input
+                type={showPass ? "text" : "password"}
+                name="password"
+                className="input"
+                placeholder="Password"
+                required
+              />
+              <button
+                onClick={() => {
+                  setShowPass(!showPass);
+                }}
+                className="btn btn-xs absolute right-5 top-2 z-10"
+              >
+                {showPass ? <FaRegEye></FaRegEye> : <FaEyeSlash></FaEyeSlash>}
+              </button>
             </div>
             <div className="mt-2">
               <a className="link link-hover text-sm">Forgot password?</a>
             </div>
 
-              {errorMessage && <p className="text-red-400 text-base">{errorMessage}</p>}
+            {errorMessage && (
+              <p className="text-red-400 text-base">{errorMessage}</p>
+            )}
 
             <button
               type="submit"
-              className="btn bg-[#E0F2FE] text-[#0284C7] hover:bg-[#0284C7] hover:text-white  mt-4"
+              className="btn bg-[#E0F2FE] text-[#0284C7] hover:bg-[#0284C7] hover:text-white mt-4"
             >
               SignUp
             </button>
@@ -130,7 +143,12 @@ const Signup = () => {
                 Signin here
               </Link>
             </p>
+           
           </form>
+          <button onClick={handleGoogleSignin} className="mt-3 btn bg-white text-[#0284C7] hover:bg-[#0284C7] hover:text-white">
+              <FaGoogle></FaGoogle>
+              Signin with Google
+            </button>
         </div>
       </div>
     </div>

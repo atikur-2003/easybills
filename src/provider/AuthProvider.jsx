@@ -2,8 +2,10 @@ import React, { createContext, useEffect, useState } from "react";
 import { auth } from "../firebase.config";
 import {
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
   updateProfile,
 } from "firebase/auth";
@@ -11,7 +13,9 @@ import Swal from "sweetalert2";
 
 export const AuthContext = createContext();
 
+
 const AuthProvider = ({ children }) => {
+    const googleProvider = new GoogleAuthProvider()
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [balance, setBalance] = useState(10000);
@@ -28,6 +32,11 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+
+  const googleSignIn = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider)
+  }
 
 
   const updateUser = (updatedData) => {
@@ -85,6 +94,7 @@ const AuthProvider = ({ children }) => {
     payBill,
     loading,
     setLoading,
+    googleSignIn
   };
 
   return (

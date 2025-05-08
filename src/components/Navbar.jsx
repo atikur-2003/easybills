@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import { Link, NavLink,} from "react-router";
+import { Link, NavLink, useNavigate,} from "react-router";
 import { IoMdMenu } from "react-icons/io";
 import { AuthContext } from "../provider/AuthProvider";
 import { Menu } from '@headlessui/react';
@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logOut, balance } = use(AuthContext);
+  const navigate = useNavigate()
   
 
   const handleLogout = () => {
@@ -17,6 +18,7 @@ const Navbar = () => {
           icon: "success",
           draggable: true
         });
+        navigate('/auth/signin')
       })
       .catch((error) => {
         alert(error);
@@ -66,12 +68,13 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex gap-3">
         {user ? (
-          <Menu as="div" className="relative inline-block text-left">
+          <Menu as="div" className="relative inline-block text-left ">
           <Menu.Button className="flex items-center focus:outline-none">
             <img
+          
               src={user.photoURL}
               alt="User"
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full cursor-pointer"
             />
           </Menu.Button>
 
@@ -85,7 +88,7 @@ const Navbar = () => {
                   onClick={handleLogout}
                   className={`w-full text-left px-4 py-2 ${
                     active ? 'bg-gray-100' : ''
-                  } text-red-600`}
+                  } text-red-600 cursor-pointer`}
                 >
                   Log Out
                 </button>
