@@ -19,7 +19,7 @@ const slides = [
     {
       title: "Stay On Track",
       subtitle: "Get reminders before due dates and never miss a payment",
-      image: "https://source.unsplash.com/featured/?bills,technology",
+      image: "https://i.postimg.cc/YSq2969f/invoice.avif",
     },
   ];
 
@@ -41,8 +41,8 @@ const Hero = () => {
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
                 <div className=" p-6 rounded text-center max-w-xl">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-2">{slide.title}</h2>
-                  <p className="text-lg">{slide.subtitle}</p>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-3">{slide.title}</h2>
+                  <p className="text-lg md:text-xl">{slide.subtitle}</p>
                 </div>
               </div>
             </SwiperSlide>

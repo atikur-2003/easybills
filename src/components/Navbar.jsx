@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="dropdown">
           <div
             tabIndex={0}
-            className="btn btn-ghost lg:hidden text-white -ml-3"
+            className="btn btn-ghost md:hidden text-white -ml-3"
           >
             <IoMdMenu size={25}></IoMdMenu>
           </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
           EasyBills
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1 text-white">{links}</ul>
       </div>
       <div className="navbar-end flex gap-3">

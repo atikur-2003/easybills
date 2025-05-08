@@ -63,10 +63,10 @@ const Signup = () => {
         icon: "success",
         draggable: true
       });
-      navigate('/');
+      navigate(`${location.state ? location.state : "/"}`);
     })
     .catch(error => {
-      console.log(error);
+      alert(error)
     })
   }
 

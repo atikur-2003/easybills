@@ -30,7 +30,7 @@ const MyProfile = () => {
   };
 
   return (
-    <div className="py-24 max-w-md mx-auto text-center">
+    <div className="py-24 px-3 md:px-0 max-w-md mx-auto text-center">
       <h1 className="text-2xl font-bold mb-6 text-[#0c2f54]">My Profile</h1>
 
       <img
@@ -54,13 +54,6 @@ const MyProfile = () => {
             onChange={(e) => setPhotoURL(e.target.value)}
             className="input input-bordered w-full mb-4"
             placeholder="Photo URL"
-          />
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="input input-bordered w-full mb-4"
-            placeholder="Email Address"
           />
           <button
             onClick={handleUpdate}

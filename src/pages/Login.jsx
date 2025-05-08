@@ -61,10 +61,15 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         const user = result.user;
-       navigate('/');
+        Swal.fire({
+          title: "SignIn Successful",
+          icon: "success",
+          draggable: true,
+        });
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
-        console.log(error);
+        alert(error)
       });
   };
 
@@ -87,23 +92,23 @@ const Login = () => {
             />
 
             <label className="label text-lg font-medium">Password</label>
-                        <div className="relative">
-                          <input
-                            type={showPass ? "text" : "password"}
-                            name="password"
-                            className="input"
-                            placeholder="Password"
-                            required
-                          />
-                          <button
-                            onClick={() => {
-                              setShowPass(!showPass);
-                            }}
-                            className="btn btn-xs absolute right-5 top-2 z-10"
-                          >
-                            {showPass ? <FaRegEye></FaRegEye> : <FaEyeSlash></FaEyeSlash>}
-                          </button>
-                        </div>
+            <div className="relative">
+              <input
+                type={showPass ? "text" : "password"}
+                name="password"
+                className="input"
+                placeholder="Password"
+                required
+              />
+              <button
+                onClick={() => {
+                  setShowPass(!showPass);
+                }}
+                className="btn btn-xs absolute right-5 top-2 z-10"
+              >
+                {showPass ? <FaRegEye></FaRegEye> : <FaEyeSlash></FaEyeSlash>}
+              </button>
+            </div>
             <div className="mt-2">
               <a onClick={handleForgetPass} className="link link-hover text-sm">
                 Forgot password?
