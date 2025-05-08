@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {signIn} = use(AuthContext)
@@ -14,10 +15,26 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
+    setError("")
+
     signIn(email, password)
     .then((result) => {
       const user = result.user;
-      navigate(`${location.state? location.state : '/'}`)
+      if(!user.emailVerified){
+        Swal.fire({
+          title: "Please Verify Your Email",
+          icon: "success",
+          draggable: true
+        });
+      }
+      else{
+        Swal.fire({
+          title: "SignIn Successful",
+          icon: "success",
+          draggable: true
+        });
+        navigate(`${location.state? location.state : '/'}`)
+      }
     })
     .catch((error) => {
       const errorCode = error.code;

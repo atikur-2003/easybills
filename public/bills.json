@@ -5,7 +5,7 @@
         "logo": "https://i.postimg.cc/pLhMNxxQ/DESCO.jpg",
         "bill_type_icon": "https://www.flaticon.com/free-icons/electricity",
         "organization": "DESCO",
-        "amount": 1500,
+        "amount": 1550,
         "due_date": "2025-06-10T00:00:00.000Z",
         "paid": false
     },
@@ -25,7 +25,7 @@
         "logo": "https://i.postimg.cc/8cHMMmdp/Amber-it.jpg",
         "bill_type_icon":"https://www.flaticon.com/free-icons/internet",
         "organization": "Amber It",
-        "amount": 800,
+        "amount": 1000,
         "due_date": "2025-06-12T00:00:00.000Z",
         "paid": false
     },
@@ -35,7 +35,7 @@
         "logo": "https://i.postimg.cc/mgGJn9X4/WASA.jpg",
         "bill_type_icon": "https://www.flaticon.com/free-icons/water" ,
         "organization": "WASA",
-        "amount": 600,
+        "amount": 700,
         "due_date": "2025-06-18T00:00:00.000Z",
         "paid": true
     },
@@ -55,7 +55,7 @@
         "logo": "https://i.postimg.cc/FHBCn81J/nsu.png",
         "bill_type_icon":"https://www.flaticon.com/free-icons/tution",
         "organization": "North South University",
-        "amount": 2000,
+        "amount": 2500,
         "due_date": "2025-06-01T06:57:58.110Z",
         "paid": false
       }
