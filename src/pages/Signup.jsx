@@ -13,7 +13,6 @@ const Signup = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({ name, photo, email, password });
 
     createUser(email, password)
       .then((result) => {
@@ -22,7 +21,7 @@ const Signup = () => {
           setUser({...user, displayName: name, photoURL: photo});
           navigate('/')
         }).catch((error) => {
-          console.log(error);
+          alert(error)
           setUser(user)
 
         });

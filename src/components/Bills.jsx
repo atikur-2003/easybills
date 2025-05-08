@@ -9,7 +9,7 @@ const Bills = () => {
     fetch("/bills.json")
       .then((res) => res.json())
       .then((data) => setBills(data))
-      .catch((err) => console.error("Failed to load bills:", err));
+      .catch((err) => alert("Failed to load bills:", err));
   }, []);
 
   if (!bills.length) return <p>Loading...</p>;

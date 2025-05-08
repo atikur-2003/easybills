@@ -12,13 +12,13 @@ const PayBill = () => {
         const found = data.find((item) => item.id === parseInt(id));
         setBill(found);
       })
-      .catch((err) => console.error("Error loading bill:", err));
+      .catch((err) => alert("Error loading bill:", err));
   }, [id]);
 
   if (!bill) return <p className="p-4">Loading or not found...</p>;
 
   return (
-    <div className="pt-24 pb-14">
+    <div className="pt-24 pb-14 px-3 md:px-0">
       <div className="flex flex-col md:flex-row gap-7 md:gap-20 bg-white shadow-lg p-3 rounded-md md:max-w-2xl mx-auto">
         <div className="flex justify-center md:justify-start">
           <img
