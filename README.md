@@ -2,19 +2,19 @@
 
 ## <img src="https://i.postimg.cc/fTPmp331/project1.png">
 
-Welcome to **EasyBills**,EasyBills is a Utility Bill Payment Website. In this website, there is separate role Admin and user. Admin can add and serve meal and can manage user. A user can create an account and buy a membership package.
+Welcome to **EasyBills**,EasyBills is a Utility Bills Payment Website. In this website, user can create a account and pay their utility bills like electricit, gas,water,internet etc. This is a user-friendly website user can pay their bill easily.
 ---
 
 ## 📌 Project Overview
 
 | Detail                 | Information                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------- |
-| **GitHub server site** | [MealMate-client](https://github.com/atikur-2003/querynest-server)         |
-| **Live Site client**   | [MealMate-firebase](https://mealmate-84e00.web.app/)                                            |
+| **GitHub Client site** | [EasyBills-client](https://github.com/atikur-2003/easybills)         |
+| **Live Site client**   | [EasyBills-firebase](https://assignment-8-9bfd2.web.app/)                                            |
 
 ## 🌐 Live Site
 
-[🔗 Deployed App](#) _(https://mealmate-84e00.web.app/)_
+[🔗 Deployed App](#) _(https://assignment-8-9bfd2.web.app/)_
 
 ---
 
@@ -22,11 +22,9 @@ Welcome to **EasyBills**,EasyBills is a Utility Bill Payment Website. In this we
 
 - **Frontend**: React.js, Tailwind CSS, Firebase
 - **Routing**: React Router;
-- **Forms**: React Hook Form
 - **State Management**: React Context API (AuthProvider)
-- **Animations**: Lottie
 - **Toast Notifications**: Sweetalert2
-- **Deployment**: GitHub Pages / Firebase / Vercel
+- **Deployment**: GitHub Pages / Firebase
 - **Build Tool**: Vite
 ---
 
@@ -39,27 +37,10 @@ Welcome to **EasyBills**,EasyBills is a Utility Bill Payment Website. In this we
 - **Protected Routes**: Restricts access to sensitive pages.
 - **Password Reset**: Users can reset passwords through email verification.
 
-
-### 👤 User Dashboard
-
-- **Profile Page**: View information, including display name and photo.
-- **Requested Meal**: Can see all requested meal.
-- **My Reviews**: Can see all the reviews user have given.
-- **Payment history**: Can see the payment history.
-
-  ### 👤 Admin Dashboard
-
-- **Prifile**: View information, including display name and photo and total added meals.
-- **add meal**: Can add a meal.
-- **all meals**: Can see all the meals.
-- **manage users**: Can make and remove anyone admin.
--  **manage users**: Can make and remove anyone admin.
--  **all reviews**: Can see all reviews.
-
 ### 📄 Additional Pages
 
-- **meals**:can see all meals.
-- - **meals by category**:can see meals by category.
+- **my bills**:can see all bills.
+- **my profile**:user can see and edit his profile.
 - **FAQ**: Frequently Asked Questions.
 - **Privacy Policy**: Understand how user data is handled.
 - **Terms & Conditions**: Legal information regarding the use of FlavorBook.
