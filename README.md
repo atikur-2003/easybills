@@ -1,16 +1,11 @@
-# EasyBills Web App
+# EasyBills
 
 ## <img src="https://i.postimg.cc/fTPmp331/project1.png">
 
 Welcome to **EasyBills**,EasyBills is a Utility Bills Payment Website. In this website, user can create a account and pay their utility bills like electricit, gas,water,internet etc. This is a user-friendly website user can pay their bill easily.
 ---
 
-## 📌 Project Overview
-
-| Detail                 | Information                                                                        |
-| ---------------------- | ---------------------------------------------------------------------------------- |
-| **GitHub Client site** | [EasyBills-client](https://github.com/atikur-2003/easybills)         |
-| **Live Site client**   | [EasyBills-firebase](https://assignment-8-9bfd2.web.app/)                                            |
+## 📌 Project Overview                                        
 
 ## 🌐 Live Site
 
