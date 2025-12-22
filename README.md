@@ -4,14 +4,12 @@
 
 Welcome to **EasyBills**,EasyBills is a Utility Bills Payment Website. In this website, user can create a account and pay their utility bills like electricit, gas,water,internet etc. This is a user-friendly website user can pay their bill easily.
 
-
 ## 📌 Project Overview                                        
 
 ## 🌐 Live Site
 
 [🔗 Deployed App](#) _(https://assignment-8-9bfd2.web.app/)_
 
----
 
 ## 🛠️ Tech Stack
 
