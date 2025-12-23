@@ -19,7 +19,6 @@ Welcome to **EasyBills**,EasyBills is a Utility Bills Payment Website. In this w
 - **Toast Notifications**: Sweetalert2
 - **Deployment**: GitHub Pages / Firebase
 - **Build Tool**: Vite
----
 
 ## 🚀 Features
 
@@ -51,5 +50,3 @@ Welcome to **EasyBills**,EasyBills is a Utility Bills Payment Website. In this w
 - copy the repo link and clone it in your pc
 - then run the project using npm run dev command
 - it will generate a link. copy and paste the link in browser
-
----
